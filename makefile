@@ -49,14 +49,12 @@ venv-migrations:
 	@echo ""
 	@echo "Make migrations file and then push it onto the database"
 	@echo ""
-	( source venv/bin/activate; python manage.py makemigrations projects; python manage.py makemigrations blog; python manage.py migrate; )
+	( source venv/bin/activate; python manage.py makemigrations personal_portfolio;python manage.py makemigrations projects; python manage.py makemigrations blog; python manage.py migrate; )
 	@echo ""
 
 venv-admin:
 	@echo ""
 	@echo "Setup superuser for admin site."
-	@echo ""
-	@echo "At present I cannot get this to work reliably - I must be missing something"
 	@echo ""
 	( source venv/bin/activate; python manage.py createsuperuser; )
 	@echo ""
@@ -137,9 +135,11 @@ venv-clean:
 	@echo ""
 	@echo ""
 	rm -rf ./blog/__pycache__*
+	rm -rf ./blog/migrations/__pycache__*
 	@echo ""
 	@echo ""
 	rm -rf ./projects/__pycache__*
+	rm -rf ./projects/migrations/__pycache__*
 
 clean-venv:
 	@echo ""
