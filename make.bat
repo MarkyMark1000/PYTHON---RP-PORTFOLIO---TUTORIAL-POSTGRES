@@ -189,7 +189,7 @@ if "%1" EQU "venv-clean" (
 	rmdir /S blog\migrations\__pycache__
 	@echo ""
 	rmdir /S projects\__pycache__
-	mdir /S migrations\__pycache__
+	rmdir /S migrations\__pycache__
 	@echo ""
 )
 
