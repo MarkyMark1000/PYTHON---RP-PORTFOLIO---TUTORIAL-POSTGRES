@@ -49,7 +49,7 @@ venv-migrations:
 	@echo ""
 	@echo "Make migrations file and then push it onto the database"
 	@echo ""
-	( source venv/bin/activate; python manage.py makemigrations personal_portfolio;python manage.py makemigrations projects; python manage.py makemigrations blog; python manage.py migrate; )
+	( source venv/bin/activate; python manage.py makemigrations projects; python manage.py makemigrations blog; python manage.py migrate; )
 	@echo ""
 
 venv-admin:
