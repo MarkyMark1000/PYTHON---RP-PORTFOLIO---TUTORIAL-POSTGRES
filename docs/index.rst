@@ -43,6 +43,22 @@ However the following changes have been made:
 Warning:
 --------
 
+    - Postgre and psycopg2 are a bit of a nightmare.   On my mac, I got it to work using psycopg2-binary.
+    - When transfering to windows this didn't work.   I tried psycopg2 and this didn't work either.
+    - To get windows working, I did the following:
+        - pip install --upgrade setuptools
+        - download and install postgresql
+        - add C:\Program Files\PostgreSQL\10\bin to PATH using advanced system settings
+        - then completely build the environment from scratch using psycopg2 (not -binary)
+        - then recreate the database and permissions and then build the migrations etc from scratch.
+        - it is almost as if I cannot transfer from mac to windows.   I MAY be able to get it to work
+          if I can get psycopg2 to work on the mac.
+    - For the mac, I did the following:
+        - add /Library/PostgreSQL/11/bin to PATH in the .bash_profile file.
+
+Warning:
+--------
+
 In a similar manner to Flask, there is a default value for SECRET_KEY should be changed to some 
 random bytes in production.
 

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.15.2: http://docutils.sourceforge.net/" />
 <title>GET STARTED WITH DJANGO PART 1: BUILD A PORTFOLIO APP</title>
 <style type="text/css">
 
@@ -412,6 +412,37 @@ THIS PROJECT:
 </div>
 <div class="section" id="warning">
 <h2>Warning:</h2>
+<blockquote>
+<ul class="simple">
+<li>Postgre and psycopg2 are a bit of a nightmare.   On my mac, I got it to work using psycopg2-binary.</li>
+<li>When transfering to windows this didn't work.   I tried psycopg2 and this didn't work either.</li>
+<li><dl class="first docutils">
+<dt>To get windows working, I did the following:</dt>
+<dd><ul class="first last">
+<li>pip install --upgrade setuptools</li>
+<li>download and install postgresql</li>
+<li>add C:Program FilesPostgreSQL10bin to PATH using advanced system settings</li>
+<li>then completely build the environment from scratch using psycopg2 (not -binary)</li>
+<li>then recreate the database and permissions and then build the migrations etc from scratch.</li>
+<li>it is almost as if I cannot transfer from mac to windows.   I MAY be able to get it to work
+if I can get psycopg2 to work on the mac.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>For the mac, I did the following:</dt>
+<dd><ul class="first last">
+<li>add /Library/PostgreSQL/11/bin to PATH in the .bash_profile file.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="id1">
+<h2>Warning:</h2>
 <p>In a similar manner to Flask, there is a default value for SECRET_KEY should be changed to some
 random bytes in production.</p>
 <blockquote>
@@ -642,7 +673,7 @@ necessary for the website to work, but makes it more appealing.   Please see the
 </div>
 <div class="section" id="test-coding-standards">
 <h1>Test Coding Standards</h1>
-<div class="section" id="id2">
+<div class="section" id="id3">
 <h2>Manual</h2>
 <ul class="simple">
 <li><dl class="first docutils">
@@ -728,7 +759,7 @@ necessary for the website to work, but makes it more appealing.   Please see the
 </li>
 </ul>
 </div>
-<div class="section" id="id3">
+<div class="section" id="id4">
 <h2>MakeFile</h2>
 <ul class="simple">
 <li><dl class="first docutils">
@@ -760,7 +791,7 @@ necessary for the website to work, but makes it more appealing.   Please see the
 </div>
 <div class="section" id="cleanup">
 <h1>Cleanup</h1>
-<div class="section" id="id4">
+<div class="section" id="id5">
 <h2>Manual</h2>
 <ul class="simple">
 <li><dl class="first docutils">
@@ -805,7 +836,7 @@ necessary for the website to work, but makes it more appealing.   Please see the
 </li>
 </ul>
 </div>
-<div class="section" id="id5">
+<div class="section" id="id6">
 <h2>MakeFile</h2>
 <ul class="simple">
 <li><dl class="first docutils">

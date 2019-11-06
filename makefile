@@ -66,7 +66,7 @@ venv-docs:
 	@echo ""
 	rm -rf ./docs/*.html
 	@echo ""
-	rst2html.py ./docs/index.rst ./docs/index.html
+	( source venv/bin/activate; python3 ./venv/bin/rst2html.py ./docs/index.rst ./docs/index.html; )
 	@echo ""
 
 venv-run:
