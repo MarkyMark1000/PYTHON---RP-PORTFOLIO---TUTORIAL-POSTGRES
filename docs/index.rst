@@ -55,6 +55,13 @@ Warning:
           if I can get psycopg2 to work on the mac.
     - For the mac, I did the following:
         - add /Library/PostgreSQL/11/bin to PATH in the .bash_profile file.
+        - This still didn't work, so I ended up using psycopg2-binary.
+    - Postgre looks like a bit of a nightmare and you may need to hack around with it depending upon
+      what operating system you are on.
+    - I have found myself resetting the project often.   Remove all of the pycache directories, remove
+      the migration files.   remove the venv directory and rebuild from the requirements file (or django etc)
+      remove the database and re-add it.   remove the database permissions and re-add.   Finally run the
+      migrations.
 
 Warning:
 --------
